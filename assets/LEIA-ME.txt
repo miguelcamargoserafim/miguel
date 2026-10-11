@@ -1,0 +1,1 @@
+Coloque nesta pasta suas imagens. Depois, informe os caminhos em ../images.js.

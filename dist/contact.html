@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#100819">
+    <meta name="description" content="Miguel Camargo Serafim — web projects, live coding and contact.">
+    <title data-i18n="contactTitle">
+      Contact — Miguel Camargo Serafim
+    </title>
+    <script>
+      try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'dark';document.documentElement.lang=localStorage.getItem('portfolio-language')||'en'}catch{}
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="images.js" defer>
+    </script>
+    <script src="js/translations.js" defer>
+    </script>
+    <script src="js/i18n.js" defer>
+    </script>
+    <script src="js/theme.js" defer>
+    </script>
+
+    <script src="js/images.js" defer>
+    </script>
+
+    <script src="js/main.js" defer>
+    </script>
+  </head>
+  <body>
+    <a data-i18n="skip" class="skip" href="#main">
+      Skip to content
+    </a>
+    <header class="site-header shell">
+      <a class="wordmark" href="index.html" aria-label="Miguel Camargo Serafim">
+        Miguel
+        <span>
+          cs.
+        </span>
+      </a>
+      <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
+        <a data-i18n="navStack" href="index.html#stack-lab">Stack Lab</a>
+        <a data-i18n="navAbout" href="index.html#about">
+          About
+        </a>
+        <a data-i18n="navContact" href="contact.html" aria-current="page">
+          Contact
+        </a>
+      </nav>
+      <div class="preferences">
+        <label class="language-control">
+          <span class="sr-only" data-i18n="language">
+            Site language
+          </span>
+          <select id="language">
+            <option value="en">
+              EN
+            </option>
+            <option value="pt-BR">
+              PT
+            </option>
+          </select>
+        </label>
+        <button id="theme-toggle" class="theme-control" type="button" aria-label="Light mode" title="Light mode">
+          <span aria-hidden="true" id="theme-icon">
+            ☀
+          </span>
+        </button>
+      </div>
+    </header>
+    <!-- Contatos superiores: links fornecidos por Miguel. -->
+    <div class="top-contacts shell" role="group" data-i18n-aria="contactChannels" aria-label="Contact channels">
+      <a href="https://www.instagram.com/signalsolutions_/" target="_blank" rel="noopener noreferrer">Signal Solutions <span>@signalsolutions_ ↗</span></a>
+      <a href="https://wa.me/5524999765334" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/miguel-camargo-serafim-10173b38b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.twitch.tv/lazzines_" target="_blank" rel="noopener noreferrer">Twitch</a>
+      <a href="https://www.instagram.com/serafymx_/" target="_blank" rel="noopener noreferrer">Instagram <span>@serafymx_ ↗</span></a>
+    </div>
+    <main id="main" class="shell contact-main">
+      <div id="top">
+      </div>
+      <a data-i18n="backPortfolio" class="back-link" href="index.html">
+        Back to portfolio
+      </a>
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <h1 data-i18n="contactHeading" >
+            Let’s talk.
+          </h1>
+          <p data-i18n="contactIntro" >
+            For a new project, a professional connection or a conversation while I code. Choose where to find me.
+          </p>
+          <span class="contact-monogram" aria-hidden="true">
+            m.
+          </span>
+        </div>
+        <section class="channel-list" data-i18n-aria="contactChannels" aria-label="Contact channels">
+          <a class="channel" href="https://www.linkedin.com/in/miguel-camargo-serafim-10173b38b/" target="_blank" rel="noopener noreferrer">
+            <div class="channel-title">
+              <h2>
+                LinkedIn
+              </h2>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <p data-i18n="linkedinDesc" >
+              My professional profile and connections.
+            </p>
+            <span class="channel-handle">
+              Miguel Camargo Serafim
+            </span>
+          </a>
+          <a class="channel" href="https://wa.me/5524999765334" target="_blank" rel="noopener noreferrer">
+            <div class="channel-title">
+              <h2>
+                WhatsApp
+              </h2>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <p data-i18n="whatsappDesc" >
+              Talk to me directly about projects and ideas.
+            </p>
+            <span class="channel-handle">
+              +55 (24) 99976-5334
+            </span>
+          </a>
+          <a class="channel" href="https://www.twitch.tv/lazzines_" target="_blank" rel="noopener noreferrer">
+            <div class="channel-title">
+              <h2>
+                Twitch
+              </h2>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <p data-i18n="twitchDesc" >
+              Live coding sessions. Watch me build my projects.
+            </p>
+            <span class="channel-handle">
+              lazzines_
+            </span>
+          </a>
+          <a class="channel" href="https://www.instagram.com/serafymx_/" target="_blank" rel="noopener noreferrer">
+            <div class="channel-title">
+              <h2>
+                Instagram
+              </h2>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <p data-i18n="instagramDesc" >
+              Send me a message on Instagram.
+            </p>
+            <span class="channel-handle">
+              @serafymx_
+            </span>
+          </a>
+        </section>
+      </div>
+
+    </main>
+    <footer class="shell footer">
+      <p>
+        ©
+        <span id="year">
+        </span>
+        Miguel Camargo Serafim
+      </p>
+      <a data-i18n="backTop" href="#top">
+        Back to top
+      </a>
+    </footer>
+  </body>
+</html>

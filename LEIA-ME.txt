@@ -1,0 +1,5 @@
+O guia atualizado está em README.md.
+
+Abra index.html para visualizar.
+Edite imagens em images.js; textos em js/translations.js; estilos em css/; animações em js/animations.js.
+Depois de editar, rode: node scripts/build.mjs

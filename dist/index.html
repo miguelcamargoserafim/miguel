@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#100819">
+    <meta name="description" content="Miguel Camargo Serafim — web projects, live coding and contact.">
+    <title data-i18n="homeTitle">
+      Miguel Camargo Serafim — Portfolio
+    </title>
+    <script>
+      try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'dark';document.documentElement.lang=localStorage.getItem('portfolio-language')||'en'}catch{}
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/stack-lab.css">
+    <script src="images.js" defer>
+    </script>
+    <script src="js/translations.js" defer>
+    </script>
+    <script src="js/i18n.js" defer>
+    </script>
+    <script src="js/theme.js" defer>
+    </script>
+
+    <script src="js/images.js" defer>
+    </script>
+
+    <script src="js/main.js" defer>
+    </script>
+    <script src="js/lab/data.js" defer></script>
+    <script src="js/lab/engines.js" defer></script>
+    <script src="js/lab/core.js" defer></script>
+    <script src="js/lab/playground.js" defer></script>
+    <script src="js/lab/terminal.js" defer></script>
+    <script src="js/lab/sql.js" defer></script>
+    <script src="js/lab/api.js" defer></script>
+    <script src="js/lab/support.js" defer></script>
+    <script src="js/lab/challenges.js" defer></script>
+    <script src="js/lab/projects.js" defer></script>
+    <script src="js/lab/games-data.js" defer></script>
+    <script src="js/lab/game-editor.js" defer></script>
+    <script src="js/lab/game-runner.js" defer></script>
+    <script src="js/lab/games.js" defer></script>
+    <script src="js/lab/support-data.js" defer></script>
+    <script src="js/lab/support-center.js" defer></script>
+    <script src="js/lab/app.js" defer></script>
+  </head>
+  <body>
+    <a data-i18n="skip" class="skip" href="#main">
+      Skip to content
+    </a>
+    <header class="site-header shell">
+      <a class="wordmark" href="index.html" aria-label="Miguel Camargo Serafim">
+        Miguel
+        <span>
+          cs.
+        </span>
+      </a>
+      <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
+        <a data-i18n="navStack" href="#stack-lab">Stack Lab</a>
+        <a data-i18n="navAbout" href="index.html#about">
+          About
+        </a>
+        <a data-i18n="navContact" href="contact.html" >
+          Contact
+        </a>
+      </nav>
+      <div class="preferences">
+        <label class="language-control">
+          <span class="sr-only" data-i18n="language">
+            Site language
+          </span>
+          <select id="language">
+            <option value="en">
+              EN
+            </option>
+            <option value="pt-BR">
+              PT
+            </option>
+          </select>
+        </label>
+        <button id="theme-toggle" class="theme-control" type="button" aria-label="Light mode" title="Light mode">
+          <span aria-hidden="true" id="theme-icon">
+            ☀
+          </span>
+        </button>
+      </div>
+    </header>
+    <!-- Contatos superiores: links fornecidos por Miguel. -->
+    <div class="top-contacts shell" role="group" data-i18n-aria="contactChannels" aria-label="Contact channels">
+      <a href="https://www.instagram.com/signalsolutions_/" target="_blank" rel="noopener noreferrer">Signal Solutions <span>@signalsolutions_ ↗</span></a>
+      <a href="https://wa.me/5524999765334" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/miguel-camargo-serafim-10173b38b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.twitch.tv/lazzines_" target="_blank" rel="noopener noreferrer">Twitch</a>
+      <a href="https://www.instagram.com/serafymx_/" target="_blank" rel="noopener noreferrer">Instagram <span>@serafymx_ ↗</span></a>
+    </div>
+    <main id="main">
+      <section class="hero shell" id="top">
+        
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="hero-identity">
+              <div class="identity-fallback" data-image-fallback="nameBackground" aria-hidden="true"></div>
+              <img src="assets/bliss.jpg" class="identity-image" data-image-display="nameBackground" alt="" aria-hidden="true" fetchpriority="high">
+              <h1 class="hero-name"><span>Miguel</span><span>Camargo</span><span>Serafim<span class="hero-name-dot">.</span></span></h1>
+            </div>
+            <p data-i18n="heroText" class="hero-description">
+              I’m Miguel. I build websites and share the process, from the first lines of code to the next version.
+            </p>
+            <div class="hero-actions">
+              <a class="hero-support-cta" data-support-link href="#tech-support">
+                <span class="hero-support-icon" aria-hidden="true">⌘</span>
+                <span class="hero-support-copy"><strong data-i18n="supportCTA">Technical support</strong><span data-i18n="supportCTADetail">Troubleshooting & help via WhatsApp</span></span>
+                <span class="hero-support-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a data-i18n="getInTouch" class="plain-link" href="contact.html">
+                Get in touch
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- STACK LAB: módulos em js/lab/; dados editáveis em js/lab/data.js. -->
+      <section class="stack-lab shell lab" id="stack-lab" lang="pt-BR" aria-labelledby="stack-heading">
+        <div class="lab-header">
+<h2 id="stack-heading">STACK <span>LAB</span><span class="lab-cursor" aria-hidden="true">_</span></h2>
+          <p>Explore minhas habilidades em desenvolvimento e tecnologia através de experimentos interativos, código e soluções práticas.</p>
+          <div class="lab-chips"><span>06 experimentos</span><span>Dados locais</span><span>Sem instalação</span></div>
+          <p class="lab-skills-title">Habilidades</p>
+          <div class="lab-chips lab-registered-skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>Cobalt</span><span>AI Specialist</span></div>
+        </div>
+        <div class="lab-cards" id="lab-cards"></div>
+        <noscript><p>Ative o JavaScript para usar os laboratórios interativos. </p></noscript>
+        <span id="tech-support" class="lab-route-anchor" aria-hidden="true"></span>
+        <section class="lab-workspace" id="lab-workspace" aria-labelledby="lab-module-title" hidden>
+          <div class="lab-toolbar">
+            <button class="lab-button" id="lab-close" type="button">← Laboratórios</button>
+            <label class="lab-field"><span>Trocar experimento</span><select id="lab-module-select"></select></label>
+          </div>
+          <h3 id="lab-module-title" tabindex="-1"></h3>
+          <div id="lab-body"></div>
+        </section>
+        <section class="lab-real" aria-labelledby="lab-projects-title">
+          <div class="lab-subheading"><h3 id="lab-projects-title">Projetos reais, em construção.</h3><p>Versões disponíveis e estados documentados. Os dados dos experimentos não pertencem a estes projetos.</p></div>
+          <div id="lab-real-projects"></div>
+        </section>
+      </section>
+      <section class="about shell" id="about">
+        <div>
+          <h2 data-i18n="aboutTitle" >
+            The person behind the code.
+          </h2>
+          <p data-i18n="aboutText" >
+            This portfolio brings together my websites and the work I’m developing. I like sharing what I’m building, including the steps along the way.
+          </p>
+        </div>
+        <div class="live-note">
+          <span class="live-icon" aria-hidden="true">
+            &lt;/&gt;
+          </span>
+          <h3 data-i18n="liveTitle" >
+            Code, live.
+          </h3>
+          <p data-i18n="liveText" >
+            I stream coding sessions on Twitch. Come watch a project take shape and follow the next update.
+          </p>
+          <a data-i18n="watch" class="inline-link" href="https://www.twitch.tv/lazzines_" target="_blank" rel="noopener noreferrer">
+            Watch on Twitch
+          </a>
+        </div>
+      </section>
+      <section class="contact-invite shell">
+        <h2 data-i18n="connectTitle" >
+          Have a project in mind?
+        </h2>
+        <p data-i18n="connectText" >
+          Message me or find me on my social channels.
+        </p>
+        <a data-i18n="allContacts" class="button" href="contact.html">
+          Contact & social links
+        </a>
+      </section>
+    </main>
+    <footer class="shell footer">
+      <p>
+        ©
+        <span id="year">
+        </span>
+        Miguel Camargo Serafim
+      </p>
+      <a data-i18n="backTop" href="#top">
+        Back to top
+      </a>
+    </footer>
+  </body>
+</html>

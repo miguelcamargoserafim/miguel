@@ -1,0 +1,6 @@
+.reference-frames/
+.backup*/
+node_modules/
+
+.browser-test/
+.test-results/

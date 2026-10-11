@@ -1,0 +1,530 @@
+/* IMAGEM ATRÁS DO NOME: arquivo definido em images.js > nameBackground. */
+.name-scene {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-radius:16px;
+  margin-bottom:28px;
+  padding:30px 26px;
+  min-width:0;
+  background:#17121f
+}
+
+.name-scene .name-background,.name-backdrop {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:-2
+}
+
+.name-backdrop {
+  background:#20172d
+}
+
+.name-scene:after {
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(12,8,20,.62),rgba(12,8,20,.20)),linear-gradient(0deg,rgba(12,8,20,.35),transparent 60%);
+  pointer-events:none
+}
+
+.name-scene h1 {
+  color:#faf7ff;
+  font-size:clamp(54px,6.2vw,90px);
+  margin:0;
+  letter-spacing:-4px;
+  line-height:1.08;
+  text-shadow:0 2px 25px #08040d80
+}
+
+.name-scene h1 .name-line {
+  display:block;
+  color:inherit
+}
+
+.name-background {
+  animation:background-drift 22s ease-in-out infinite alternate;
+  will-change:transform
+}
+
+.name-line {
+  animation:name-enter .85s cubic-bezier(.2,.75,.25,1) both;
+  text-transform: capitalize;
+}
+
+.name-line:nth-child(2) {
+  animation-delay:.12s
+}
+
+.name-line:nth-child(3) {
+  animation-delay:.24s
+}
+
+.hero-topline {
+  animation:soft-enter .7s ease-out both
+}
+
+.hero-description,.hero-actions {
+  animation:soft-enter .75s ease-out .25s both
+}
+
+.hero-image-area {
+  animation:soft-enter .9s ease-out .15s both
+}
+
+.button {
+  transition:transform .25s ease,filter .25s ease,box-shadow .25s ease
+}
+
+.button:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px #8c65c429
+}
+
+.button:active {
+  transform:translateY(0)
+}
+
+.project .preview-link {
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease
+}
+
+.project:hover .preview-link {
+  transform:translateY(-5px);
+  border-color:var(--accent);
+  box-shadow:0 14px 35px #08040d30
+}
+
+.project-preview>img {
+  transition:transform .6s cubic-bezier(.2,.65,.3,1)
+}
+
+.project:hover .project-preview>img {
+  transform:scale(1.045)
+}
+
+.site-header nav a {
+  position:relative
+}
+
+.site-header nav a:after {
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-5px;
+  height:1px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease
+}
+
+.site-header nav a:hover:after,.site-header nav a:focus-visible:after {
+  transform:scaleX(1)
+}
+
+.channel-title>span {
+  transition:transform .25s ease
+}
+
+.channel:hover .channel-title>span {
+  transform:translate(4px,-4px)
+}
+
+.motion-pending {
+  opacity:0;
+  transform:translateY(24px)
+}
+
+.motion-visible {
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.3,1)
+}
+
+@keyframes name-enter {
+  from {
+    opacity:0;
+    transform:translateY(18px);
+    filter:blur(4px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0)
+  }
+}
+
+@keyframes soft-enter {
+  from {
+    opacity:0;
+    transform:translateY(15px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+@keyframes background-drift {
+  from {
+    transform:scale(1.05) translateX(-1%)
+  }
+  to {
+    transform:scale(1.14) translateX(1%)
+  }
+}
+
+@media(max-width:800px) {
+  .name-scene {
+    padding:25px 18px
+  }
+  .name-scene h1 {
+    font-size:clamp(45px,7vw,65px);
+    letter-spacing:-3px
+  }
+}
+
+@media(max-width:600px) {
+  .name-scene {
+    padding:27px 22px
+  }
+  .name-scene h1 {
+    font-size:clamp(48px,13vw,76px);
+    letter-spacing:-3px
+  }
+  .name-background {
+    animation-duration:26s
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .name-background,.name-line,.hero-topline,.hero-description,.hero-actions,.hero-image-area {
+    animation:none;
+    will-change:auto
+  }
+  .motion-pending,.motion-visible {
+    opacity:1;
+    transform:none;
+    transition:none
+  }
+  .button,.project .preview-link,.project-preview>img,.channel-title>span,.site-header nav a:after {
+    transition:none
+  }
+  .button:hover,.project:hover .preview-link,.project:hover .project-preview>img,.channel:hover .channel-title>span {
+    transform:none
+  }
+}
+
+/* Referência Maicore: sobrenome em contorno e retrato em caracteres. */
+.name-line:last-child {
+  -webkit-text-stroke:1px #e9dffb;
+  color:transparent!important;
+  text-shadow:none
+}
+
+.hero {
+  position:relative;
+  isolation:isolate;
+  --pointer-x:60%;
+  --pointer-y:40%;
+  --portrait-x:0px;
+  --portrait-y:0px
+}
+
+.hero:before {
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:radial-gradient(380px circle at var(--pointer-x) var(--pointer-y),#b4a0e80a,transparent 75%)
+}
+
+.ascii-portrait {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  mask-image:radial-gradient(ellipse at center,#000 35%,transparent 78%);
+  transform:translate(var(--portrait-x),var(--portrait-y));
+  transition:transform .4s ease-out
+}
+
+.ascii-active {
+  background:#121017
+}
+
+.ascii-active>.portrait-placeholder,.ascii-active>img {
+  opacity:.12
+}
+
+.ascii-active:after {
+  content:'';
+  position:absolute;
+  inset:-100% 0 0;
+  pointer-events:none;
+  background:linear-gradient(transparent 45%,#c4b3ef12 49.8%,transparent 50.5%);
+  animation:portrait-scan 9s linear infinite;
+  mask-image:radial-gradient(ellipse,#000,transparent 75%)
+}
+
+.motion-visible {
+  transition-delay:var(--reveal-delay,0ms)
+}
+
+.reading-word {
+  color:var(--muted);
+  opacity:.4;
+  transition:color .25s ease,opacity .25s ease
+}
+
+.reading-word.word-active {
+  color:var(--text);
+  opacity:1
+}
+
+.about>div:first-child>p {
+  font-size:clamp(19px,2.1vw,29px);
+  line-height:1.55;
+  letter-spacing:-.7px
+}
+
+@keyframes portrait-scan {
+  from {
+    transform:translateY(-30%)
+  }
+  to {
+    transform:translateY(65%)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ascii-active:after {
+    animation:none;
+    background:none
+  }
+  .ascii-portrait {
+    transform:none;
+    transition:none
+  }
+  .hero:before {
+    background:none
+  }
+  .reading-word {
+    opacity:1;
+    color:var(--text);
+    transition:none
+  }
+  .motion-visible {
+    transition-delay:0ms
+  }
+}
+
+@media(hover:none) {
+  .hero:before {
+    background:none
+  }
+}
+
+/* INTERAÇÕES DO MOUSE — intensidade em js/hover.js. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hover-surface {
+    position: relative;
+    transition: transform 350ms cubic-bezier(.2, .7, .3, 1),
+      box-shadow 350ms ease, border-color 350ms ease, opacity 650ms ease;
+  }
+
+  .hover-surface::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    background: radial-gradient(220px circle at var(--hover-x, 50%) var(--hover-y, 50%),
+      rgba(196, 179, 239, .16), transparent 75%);
+    transition: opacity 300ms ease;
+  }
+
+  .hover-surface.pointer-active::before {
+    opacity: 1;
+  }
+
+  .hover-surface.pointer-active,
+  .project:hover .preview-link.pointer-active {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-4px);
+    box-shadow: 0 18px 40px rgba(16, 8, 30, .22);
+  }
+
+  .channel.hover-surface::before {
+    border-radius: 8px;
+  }
+
+  .hover-magnetic {
+    translate: var(--magnet-x, 0px) var(--magnet-y, 0px);
+    transition: translate 200ms ease-out, transform 250ms ease,
+      box-shadow 250ms ease, background-color 250ms ease;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    box-shadow: 0 9px 30px rgba(180, 160, 232, .3);
+  }
+
+  .theme-control:hover {
+    transform: rotate(18deg) scale(1.1);
+    border-color: var(--accent);
+  }
+
+  .wordmark {
+    display: inline-block;
+    transition: transform 300ms ease;
+  }
+
+  .wordmark:hover {
+    transform: rotate(-4deg) scale(1.04);
+  }
+
+  .inline-link,
+  .plain-link,
+  .back-link,
+  .footer a,
+  .hero-topline a {
+    display: inline-block;
+    transition: color 220ms ease, transform 220ms ease, border-color 220ms ease;
+  }
+
+  .inline-link:hover,
+  .plain-link:hover,
+  .back-link:hover,
+  .footer a:hover,
+  .hero-topline a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+    border-color: var(--accent);
+  }
+
+  .default-preview {
+    transition: transform 550ms cubic-bezier(.2, .7, .3, 1);
+  }
+
+  .project:hover .default-preview {
+    transform: scale(1.04);
+  }
+
+  .project-meta h3,
+  .live-icon {
+    transition: color 250ms ease, transform 300ms ease;
+  }
+
+  .project:hover .project-meta h3 {
+    color: var(--accent);
+  }
+
+  .live-note:hover .live-icon {
+    transform: translateY(-3px) rotate(-6deg);
+  }
+}
+
+/* Zoom, profundidade e elementos internos das imagens ao passar o mouse. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .project-preview::after {
+    content: '';
+    position: absolute;
+    inset: -80% -45%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, .17) 50%, transparent 60%);
+    transform: translateX(-65%);
+  }
+
+  .project:hover .project-preview::after,
+  .project:focus-within .project-preview::after {
+    opacity: 1;
+    animation: preview-sheen 900ms ease-out both;
+  }
+
+  .project:hover .project-preview > img,
+  .project:focus-within .project-preview > img {
+    transform: scale(1.09) translate(var(--image-x, 0px), var(--image-y, 0px));
+  }
+
+  .name-background {
+    transition: translate 600ms ease, filter 600ms ease;
+  }
+
+  .name-scene:hover .name-background {
+    translate: var(--image-x, 0px) var(--image-y, 0px);
+    filter: saturate(1.15) brightness(1.08);
+  }
+
+  .name-line {
+    transition: translate 400ms ease, color 400ms ease;
+  }
+
+  .name-scene:hover .name-line:nth-child(2) { translate: 8px 0; }
+  .name-scene:hover .name-line:nth-child(3) { translate: 16px 0; }
+  .name-scene:hover h1 .name-line:last-child { color: #f5ecff !important; }
+
+  .project:hover .signal-mark i {
+    transform-origin: bottom;
+    animation: signal-wave 750ms ease-in-out infinite alternate;
+  }
+  .signal-mark i:nth-child(2) { animation-delay: 100ms; }
+  .signal-mark i:nth-child(3) { animation-delay: 200ms; }
+  .signal-mark i:nth-child(4) { animation-delay: 300ms; }
+
+  .project:hover .dai-symbol { animation: dai-bounce 800ms ease both; }
+  .leads-mark { transition: letter-spacing 400ms ease, transform 400ms ease; }
+  .project:hover .leads-mark { letter-spacing: 20px; transform: translateY(-4px); }
+
+  .code-bracket, .code-core, .css-layer, .js-core, .js-node {
+    transition: transform 500ms ease, translate 500ms ease, opacity 500ms ease;
+  }
+  .stack-experiment:hover .code-bracket:first-child,
+  .stack-experiment:focus-visible .code-bracket:first-child { translate: -14px 0; }
+  .stack-experiment:hover .code-bracket:last-child,
+  .stack-experiment:focus-visible .code-bracket:last-child { translate: 14px 0; }
+  .stack-experiment:hover .code-core,
+  .stack-experiment:focus-visible .code-core { transform: rotate(16deg); }
+  .stack-experiment:hover .css-layer:nth-child(1),
+  .stack-experiment:focus-visible .css-layer:nth-child(1) { translate: 0 42px; }
+  .stack-experiment:hover .css-layer:nth-child(3),
+  .stack-experiment:focus-visible .css-layer:nth-child(3) { translate: 0 -42px; }
+  .stack-experiment:hover .css-layer,
+  .stack-experiment:focus-visible .css-layer { transform: rotate(-12deg) skew(8deg, 8deg); }
+  .stack-experiment:hover .js-core,
+  .stack-experiment:focus-visible .js-core { transform: rotate(-8deg) scale(1.08); }
+  .stack-experiment:hover .js-node,
+  .stack-experiment:focus-visible .js-node { animation: node-pulse 900ms ease-in-out infinite alternate; }
+  .js-node:nth-child(2) { animation-delay: 200ms; }
+  .js-node:nth-child(3) { animation-delay: 400ms; }
+}
+
+@keyframes preview-sheen {
+  from { transform: translateX(-65%); }
+  to { transform: translateX(65%); }
+}
+@keyframes signal-wave {
+  from { transform: scaleY(.65); }
+  to { transform: scaleY(1.15); }
+}
+@keyframes dai-bounce {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  45% { transform: translateY(-12px) rotate(-9deg); }
+  75% { transform: translateY(-3px) rotate(5deg); }
+}
+@keyframes node-pulse {
+  from { opacity: .3; transform: scale(.8); }
+  to { opacity: 1; transform: scale(1.4); }
+}

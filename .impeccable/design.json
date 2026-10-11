@@ -1,0 +1,14 @@
+{
+  "identity": "original-purple",
+  "tokens": {
+    "dark": {
+      "background": "#100819",
+      "accent": "#b38bdc"
+    },
+    "light": {
+      "background": "#f5f3f9",
+      "accent": "#63308f"
+    }
+  },
+  "signature": "Bliss behind the name; original lab panels"
+}
